@@ -1,0 +1,828 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'poppins', sans-serif;
+}
+h1{
+   font-size: 2.5rem;
+   font-weight: 700;
+   color: rgb(35,35,85); 
+}
+
+
+/* peer leaning styling */
+
+.glow{
+    font-size: 6rem; /* Increased font size */
+    letter-spacing: 6px;
+    color: #0c0c0c;
+    text-shadow: 
+        0 0 20px rgb(15, 213, 239), /* Outer glow */
+        0 0 40px rgba(8, 238, 223, 0.895), 
+        0 0 60px rgba(5, 102, 230, 0.6),
+        0 0 80px rgba(255, 255, 0, 0.4);
+    animation: fadeIn 2s ease-in-out, glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Subtitle styling */
+.glow{
+    font-size: 2.5rem; /* Increased font size */
+    color: #ff6600;
+    text-shadow: 
+        0 0 20px rgba(255, 102, 0, 1), /* Outer glow */
+        0 0 40px rgba(255, 102, 0, 0.8), 
+        0 0 60px rgba(255, 102, 0, 0.6),
+        0 0 80px rgba(255, 102, 0, 0.4);
+    animation: slideIn 2s ease-out forwards 0.5s;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 
+            0 0 20px rgba(255, 255, 0, 1), 
+            0 0 40px rgba(255, 255, 0, 0.8), 
+            0 0 60px rgba(255, 255, 0, 0.6),
+            0 0 80px rgba(255, 255, 0, 0.4);
+    }
+    100% {
+        text-shadow: 
+            0 0 30px rgba(255, 255, 0, 1), 
+            0 0 50px rgba(255, 255, 0, 0.8), 
+            0 0 70px rgba(255, 255, 0, 0.6),
+            0 0 90px rgba(255, 255, 0, 0.4);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+ 
+span{
+    font-size: 0.9rem;
+    color: #757373;
+}
+h6{
+    font-size: 1.1rem;
+    color: rgb(24,24,49);
+}
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vw 8vw;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+    margin-top: 0%;
+}
+nav img{
+    width: 250px;
+    cursor: pointer;
+}
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+}
+nav .navigation ul li a{
+    text-decoration: none;
+    color: rgb(21,21,100);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav .navigation ul li a:hover{
+    color: #FDC93B;
+}
+#home{
+    background-image: linear-gradient(rgba(9,5,54,0.3),rgba(5,4,46,0.7)),url("images/deibuilding.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
+#home h1{
+    color: #fff;
+    font-size: 2.2rem;
+ 
+    letter-spacing: 1px;
+}
+#home h3{
+    width:50%;
+    color: #fff;
+    font-size: 0.9rem;
+   line-height: 25px;
+}
+#home .btn{
+    margin-top: 30px;
+}
+#home a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: #fff;
+    font-weight: 600;
+border-radius: 5px;
+}
+#home a.yellow{
+    color: #fff;
+    background: rgb(21,21,100);
+    transition: 0.3s;
+}
+#home a.yellow:hover {
+    color:rgb(21,21,100) ;
+    background: #fff;
+}
+
+#home a.Green{
+    color: #fff;
+    background:red;
+    transition: 0.3s;
+}
+#home a.Green:hover {
+    color:rgb(21,21,100) ;
+    background:#fff  ;
+}
+
+/* featues */ 
+#features{
+    padding: 5vw 8vw 0 8vw; 
+    text-align: center;
+}
+
+
+#features .fea-box{
+    background: #f9f9ff;
+    text-align: start;
+}
+#features .fea-box i{
+font-size: 2.3rem;
+color: rgb(44, 44, 80);
+}
+#features .fea-box h1{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(46, 46, 59);
+    padding: 13px 0 7px 0;
+}
+#features .fea-box p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(70,70,87);
+}
+
+
+
+/* Container styling for horizontal alignment */
+.features-container {
+    display: flex;
+    justify-content: space-around; /* Space between items */
+    padding: 20px;
+    gap: 20px; /* Increased gap for larger boxes */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Individual feature item with general styling */
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased gap between icon and text */
+    padding: 50px; /* Increased padding for larger box size */
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    text-emphasis-color: black;
+    font-family: Arial, sans-serif;
+    width: 32%; /* Increased width for larger boxes */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow for more depth */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.feature-item:hover {
+    transform: scale(1.05);
+}
+
+/* Specific background colors for better contrast */
+.feature-engineering {
+    background-color: #0000ef; /* Darker Blue for contrast */
+}
+
+.feature-books {
+    background-color: #df0000; /* Darker Orange for contrast */
+}
+
+.feature-homework {
+    background-color: #0000ef; /* Darker Green for contrast */
+}
+
+/* Icon styling */
+.icon {
+    font-size: 30em; /* Increased icon size for larger boxes */
+}
+
+/* Specific icon styles */
+.icon-graduation::before {
+    content: "\f19d"; /* Example Unicode for Font Awesome graduation cap */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.icon-books::before {
+    content: "\f02d"; /* Example Unicode for Font Awesome book icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.icon-upload::before {
+    content: "\f0c5"; /* Example Unicode for Font Awesome folder icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.lec{
+    color: #fff;
+    font-size:x-large;
+}
+.fbpa{
+    color: #fff;
+    font-size:x-large;
+}
+.uyhf{
+    color: #fff;
+    font-size:x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.af{
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+
+/* Search bar container styling */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Adjust width as needed */
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Input field styling */
+.search-input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+/* Placeholder text color */
+.search-input::placeholder {
+    color: black;
+    font-size:large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Button styling */
+.search-button {
+    position: absolute;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.2rem;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+/* Icon styling */
+.search-icon::before {
+    content: "\f002"; /* Font Awesome search icon code */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: black;
+}
+
+/* Cinematic focus effect */
+.search-input:focus {
+    width: 110%; /* Expands on focus */
+    background-color: #222;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Button hover effect */
+.search-button:hover {
+    transform: scale(1.2);
+}
+
+/* Input border glow effect */
+.search-input:focus-within {
+    border: 2px solid #ffffff; /* Glow effect on focus */
+}
+
+/* courses */
+
+.pc{
+    text-align: center;
+    padding-top: 30px;
+}
+#course{
+    padding: 3vw 3vw 0 3vw;
+    text-align: center;
+}
+#course .courses{
+    text-align: start;
+}
+
+#course .course-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+
+
+/* courses */
+
+#course{
+    padding: 8vw 8vw 0 8vw;
+    padding-left: 50px;
+    padding-top: 50px;
+    text-align: center;
+
+}
+
+
+/* #course .course-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+
+#course .courses{
+    text-align: start;
+    background: #f9f9ff;
+    height: 100%;
+} */
+
+/* .details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.image-items{
+    text-align: center;
+    margin: 10px;
+    justify-content: start;
+}
+
+.image-items img{
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+    justify-content: start;
+}
+.image-items p{
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+    
+}
+.image-items h6{
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
+.image-items span{
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+} */
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#course {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+    color: #fff;
+}
+
+.pc {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    font-weight: -300;
+    
+}
+
+/* Course container styling */
+/* .course-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+/* Individual course item styling */
+/* .details {
+    width: 220px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.image-items img {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.details:hover .image-items img {
+    transform: scale(1.05);
+}
+
+/* Course title and description styling */
+/* h6 {
+    font-size: 1.1em;
+    margin: 15px 0 5px;
+    color: #ffcc00;
+    text-transform: uppercase;
+} */
+
+/* p {
+    font-size: 0.9em;
+    color: #bbb;
+    margin-bottom: 10px;
+} */
+
+/* Star ratings styling */
+/* .star {
+    color: gold;
+    font-size: 1em;
+} */
+
+/* Responsive design */
+/* @media (max-width: 768px) {
+    .details {
+        width: calc(50% - 20px);
+    }
+} */
+
+/* @media (max-width: 480px) {
+    .details {
+        width: 100%;
+    }
+} */ 
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#course {
+    padding: 40px 20px;
+    text-align: center;
+    background-color:white;
+    color: #fff;
+}
+
+.pc {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:black;
+}
+
+/* Course container styling */
+.course-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Decreased gap between items */
+    padding: 0 20px;
+}
+
+/* Individual course item styling */
+.details {
+    width: 350px;
+    background-color: whitesmoke;
+    padding: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.image-items img {
+    width: 175px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.details:hover .image-items img {
+    transform: scale(1.05);
+}
+
+/* Course title and description styling */
+h6 {
+    font-size: 1.1em;
+    margin: 15px 0 5px;
+    color: #ffcc00;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 0.9em;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+/* Star ratings styling */
+.star {
+    color: gold;
+    font-size: 1em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .details {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .details {
+        width: 100%;
+    }
+}
+
+
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+/* body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+} */
+
+/* Intro section styling */
+.content{
+    width: 100%;
+    max-width: 750%;
+    text-align: center;
+    padding: 50px 20px;
+    background: brown;
+    border-radius: 2000px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color:white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.content p {
+    font-size: 1.1em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.get-started-btn {
+    padding: 10px 25px;
+    font-size: 1em;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.intro-section button:hover {
+    background: #0056b3;
+}
+
+/* Login form container */
+.login-container {
+    width: 100%;
+    max-width: 50%;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 25%;
+    
+}
+
+.login-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #fafafa;
+    color: #333;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+    background: #0056b3;
+}
+
+.login-container .forgot-password {
+    display: block;
+    margin-top: 15px;
+    color: #007bff;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.login-container .forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* pdf addition */
+.upload-section {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9ff;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: auto;
+}
+
+.upload-section h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.upload-section input[type="file"] {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+#file-name {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.upload-section button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.upload-section button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+ 
+
+
